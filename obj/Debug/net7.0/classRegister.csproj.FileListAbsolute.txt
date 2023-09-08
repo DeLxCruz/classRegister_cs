@@ -1,0 +1,14 @@
+C:\Users\APM02-36\Documents\cs\classRegister\bin\Debug\net7.0\classRegister.exe
+C:\Users\APM02-36\Documents\cs\classRegister\bin\Debug\net7.0\classRegister.deps.json
+C:\Users\APM02-36\Documents\cs\classRegister\bin\Debug\net7.0\classRegister.runtimeconfig.json
+C:\Users\APM02-36\Documents\cs\classRegister\bin\Debug\net7.0\classRegister.dll
+C:\Users\APM02-36\Documents\cs\classRegister\bin\Debug\net7.0\classRegister.pdb
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.AssemblyInfoInputs.cache
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.AssemblyInfo.cs
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.csproj.CoreCompileInputs.cache
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.dll
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\refint\classRegister.dll
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.pdb
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\classRegister.genruntimeconfig.cache
+C:\Users\APM02-36\Documents\cs\classRegister\obj\Debug\net7.0\ref\classRegister.dll
