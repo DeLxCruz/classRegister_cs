@@ -35,17 +35,7 @@ namespace classRegister.Entities
         public int Age
         {
             get => age;
-            set
-            {
-                if (value >= 0)
-                {
-                    age = value;
-                }
-                else
-                {
-                    Console.WriteLine("La edad no puede ser negativa");
-                }
-            }
+            set => age = value;
         }
 
         public string Address

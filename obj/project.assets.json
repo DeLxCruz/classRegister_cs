@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\APM02-36\\.nuget\\packages\\": {}
+    "C:\\Users\\DeLaCruz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj",
+      "projectUniqueName": "c:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj",
       "projectName": "classRegister",
-      "projectPath": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj",
-      "packagesPath": "C:\\Users\\APM02-36\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\obj\\",
+      "projectPath": "c:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj",
+      "packagesPath": "C:\\Users\\DeLaCruz\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APM02-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\DeLaCruz\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

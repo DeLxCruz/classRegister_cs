@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj": {}
+    "C:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj": {}
   },
   "projects": {
-    "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj": {
+    "C:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj",
+        "projectUniqueName": "C:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj",
         "projectName": "classRegister",
-        "projectPath": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\classRegister.csproj",
-        "packagesPath": "C:\\Users\\APM02-36\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APM02-36\\Documents\\cs\\classRegister\\obj\\",
+        "projectPath": "C:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\classRegister.csproj",
+        "packagesPath": "C:\\Users\\DeLaCruz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DeLaCruz\\Documents\\CAMPUS\\CSharp\\classRegister_cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM02-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DeLaCruz\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
