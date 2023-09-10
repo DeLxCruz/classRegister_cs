@@ -1,59 +1,59 @@
-namespace classRegister.Entities
-{
-    public class Students
+    namespace classRegister.Entities
     {
-        private string id;
-
-        private string name;
-
-        private string email;
-
-        private int age;
-
-        private string address;
-
-        public string Id
+        public class Students
         {
-            get => id;
-            set => id = value;
-        }
+            private string id;
 
-        public string Name
-        {
-            get => name;
-            set => name = value;
-        }
+            private string name;
 
-        public string Email
-        {
-            get => email;
-            set => email = value;
-        }
+            private string email;
 
-        public int Age
-        {
-            get => age;
-            set => age = value;
-        }
+            private int age;
 
-        public string Address
-        {
-            get => address;
-            set => address = value;
-        }
+            private string address;
 
-        public Students()
-        {
-        }
+            public string Id
+            {
+                get => id;
+                set => id = value;
+            }
 
-        public Students(string id, string name, string email, int age, string address)
-        {
-            this.id = id;
-            this.name = name;
-            this.email = email;
-            this.age = age;
-            this.address = address;
-        }
+            public string Name
+            {
+                get => name;
+                set => name = value;
+            }
 
+            public string Email
+            {
+                get => email;
+                set => email = value;
+            }
+
+            public int Age
+            {
+                get => age;
+                set => age = value;
+            }
+
+            public string Address
+            {
+                get => address;
+                set => address = value;
+            }
+
+            public Students()
+            {
+            }
+
+            public Students(string id, string name, string email, int age, string address)
+            {
+                this.id = id;
+                this.name = name;
+                this.email = email;
+                this.age = age;
+                this.address = address;
+            }
+
+        }
     }
-}
