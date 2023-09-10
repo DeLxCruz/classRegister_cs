@@ -1,6 +1,6 @@
 namespace classRegister.Entities
 {
-    public class Grades 
+    public class Grades
     {
         private string idStudent;
 
