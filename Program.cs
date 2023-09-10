@@ -378,6 +378,10 @@ internal class Program
                             break;
                     }
                 } while (!exitGrades);
+            }else
+            {
+                Console.WriteLine("El ID ingresado no existe.");
+                Console.ReadKey();
             }
         }
     }
