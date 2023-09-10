@@ -1,5 +1,3 @@
-
-
 namespace classRegister.Entities
 {
     public class Students

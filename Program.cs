@@ -1,10 +1,12 @@
 ﻿using classRegister.Entities;
+using System.Globalization;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
         List<Students> students = new List<Students>();
+        List<Grades> grades = new List<Grades>();
         bool exit = false;
 
         do
@@ -51,6 +53,7 @@ internal class Program
                         string id = AskId();
 
                         student.Id = id;
+                        grades.Add(new Grades(id, new List<float>(4), new List<float>(3), new List<float>(2)));
 
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         string name = AskName();
@@ -84,6 +87,10 @@ internal class Program
 
                         Console.WriteLine("¿Desea agregar otro estudiante? (S/N)");
                     } while (Console.ReadLine().Trim().ToUpper() == "S");
+                    break;
+
+                case 2:
+                    AddGrades(grades);
                     break;
 
                 case 4:
@@ -185,6 +192,213 @@ internal class Program
             else
             {
                 Console.WriteLine("La dirección debe tener entre 1 y 35 caracteres.");
+            }
+        }
+    }
+
+    static void AddGrades(List<Grades> grades)
+    {
+        Grades grade = new Grades();
+
+        Console.Clear();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+
+        Console.Write("Ingrese el ID del estudiante: ");
+
+        string id = Console.ReadLine();
+
+        grade.IdStudent = id;
+
+        foreach (Grades item in grades)
+        {
+            if (item.IdStudent == id)
+            {
+                bool exitGrades = false;
+                do
+                {
+                    Console.Clear();
+
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine("Registrar Notas de Estudiantes");
+                    Console.ResetColor();
+                    Console.WriteLine("");
+
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("1. Registrar Notas de Quices");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("2. Registrar Notas de Trabajos");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("3. Registrar Notas de Parciales");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("4. Salir");
+
+                    Console.ResetColor();
+                    Console.Write("Seleccione una opción: ");
+                    int option = Convert.ToInt16(Console.ReadLine());
+
+                    switch (option)
+                    {
+                        case 1:
+                            Console.Clear();
+                            Console.WriteLine("Ingrese las notas de los quices: ");
+                            for (int i = 0; i < 4; i++)
+                            {
+                                bool validGrade = false;
+                                float quizGrade = 0.0f;
+
+                                while (!validGrade)
+                                {
+                                    Console.Write($"Quiz {i + 1}: ");
+                                    string quiz = Console.ReadLine();
+
+                                    if (string.IsNullOrEmpty(quiz))
+                                    {
+                                        quizGrade = 0.0f;
+                                        validGrade = true;
+                                        Console.WriteLine("Por defecto se asignó la nota 0.0");
+                                    }
+                                    else if (float.TryParse(quiz, NumberStyles.Float, CultureInfo.InvariantCulture, out quizGrade))
+                                    {
+                                        if (quizGrade >= 0.0f && quizGrade <= 5.0f)
+                                        {
+                                            validGrade = true;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("La nota debe estar entre 0.0 y 5.0.");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("La nota debe ser un número válido.");
+                                    }
+                                }
+
+                                item.QuizGrades.Add(quizGrade);
+                            }
+
+
+                            Console.WriteLine("Notas de quices registradas con éxito");
+                            Console.ReadKey();
+                            break;
+
+                        case 2:
+                            Console.Clear();
+                            Console.WriteLine("Ingrese las notas de los trabajos: ");
+                            for (int i = 0; i < 2; i++)
+                            {
+                                bool validGrade = false;
+                                float homeworkGrade = 0.0f;
+
+                                while (!validGrade)
+                                {
+                                    Console.Write($"Trabajo {i + 1}: ");
+                                    string homework = Console.ReadLine();
+
+                                    if (string.IsNullOrEmpty(homework))
+                                    {
+                                        homeworkGrade = 0.0f;
+                                        validGrade = true;
+                                        Console.WriteLine("Por defecto se asignó la nota 0.0");
+                                    }
+                                    else if (float.TryParse(homework, NumberStyles.Float, CultureInfo.InvariantCulture, out homeworkGrade))
+                                    {
+                                        if (homeworkGrade >= 0.0f && homeworkGrade <= 5.0f)
+                                        {
+                                            validGrade = true;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("La nota debe estar entre 0.0 y 5.0.");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("La nota debe ser un número válido.");
+                                    }
+                                }
+
+                                item.HomeworkGrades.Add(homeworkGrade);
+                            }
+                            Console.WriteLine("Notas de trabajos registradas con éxito");
+                            Console.ReadKey();
+                            break;
+
+                        case 3:
+                            Console.Clear();
+                            Console.WriteLine("Ingrese las notas de los parciales: ");
+                            for (int i = 0; i < 3; i++)
+                            {
+                                bool validGrade = false;
+                                float examGrade = 0.0f;
+
+                                while (!validGrade)
+                                {
+                                    Console.Write($"Parcial {i + 1}: ");
+                                    string exam = Console.ReadLine();
+
+                                    if (string.IsNullOrEmpty(exam))
+                                    {
+                                        examGrade = 0.0f;
+                                        validGrade = true;
+                                        Console.WriteLine("Por defecto se asignó la nota 0.0");
+                                    }
+                                    else if (float.TryParse(exam, NumberStyles.Float, CultureInfo.InvariantCulture, out examGrade))
+                                    {
+                                        if (examGrade >= 0.0f && examGrade <= 5.0f)
+                                        {
+                                            validGrade = true;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("La nota debe estar entre 0.0 y 5.0.");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("La nota debe ser un número válido.");
+                                    }
+                                }
+
+                                item.ExamGrades.Add(examGrade);
+                            }
+                            Console.WriteLine("Notas de parciales registradas con éxito");
+                            Console.ReadKey();
+                            break;
+
+                        case 4:
+                            exitGrades = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Opción no válida, intente nuevamente");
+                            Console.ReadKey();
+                            break;
+                    }
+                } while (!exitGrades);
+            }
+        }
+    }
+
+    static void ShowStudentsGrades(List<Grades> grades)
+    {
+        Console.Clear();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+
+        Console.WriteLine("Ingrese el ID del estudiante: ");
+
+        string id = Console.ReadLine();
+
+        foreach (Grades item in grades)
+        {
+            if (item.IdStudent == id)
+            {
+                Console.WriteLine($"Notas de quices: {item.QuizGrades}");
+                Console.WriteLine($"Notas de trabajos: {item.HomeworkGrades}");
+                Console.WriteLine($"Notas de parciales: {item.ExamGrades}");
             }
         }
     }
