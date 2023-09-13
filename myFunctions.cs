@@ -1,10 +1,31 @@
 using System.Globalization;
 using classRegister.Entities;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace classRegister
 {
     public static class MyFunctions
     {
+        public static void SaveData (List<Students> Listed)
+        {
+            string json = JsonConvert.SerializeObject(Listed, Formatting.Indented);
+            File.WriteAllText("reportCard.json", json);
+        }
+
+        public static List<Students> LoadData()
+        {
+            using (StreamReader reader = new StreamReader("reportCard.json"))
+            {
+                string json = reader.ReadToEnd();
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                };
+                List<Students> students = JsonConvert.DeserializeObject<List<Students>>(json, settings);
+                return students ?? new List<Students>();
+            }
+        }
         public static string AskId(List<Students> students)
         {
             while (true)

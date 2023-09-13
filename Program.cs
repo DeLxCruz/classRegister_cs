@@ -65,7 +65,7 @@ namespace classRegister
                                 string id = MyFunctions.AskId(students);
 
                                 student.Id = id;
-                                grades.Add(new Grades(id, new List<float>(4), new List<float>(3), new List<float>(2)));
+                                grades.Add(new Grades(id, new List<float>(), new List<float>(), new List<float>()));
 
                                 Console.ForegroundColor = ConsoleColor.Yellow;
                                 string name = MyFunctions.AskName();

@@ -1,6 +1,6 @@
 namespace classRegister.Entities
 {
-    public class Students
+    public class Students:Grades
     {
         private string id;
 
@@ -42,17 +42,20 @@ namespace classRegister.Entities
             set => address = value;
         }
 
-        public Students()
+        public Students():base()
         {
         }
 
-        public Students(string id, string name, string email, int age, string address)
+        public Students(string id, string name, string email, int age, string address, List<float> quizGrades, List<float> examGrades, List<float> homeworkGrades):base(quizGrades,examGrades,homeworkGrades)
         {
             this.id = id;
             this.name = name;
             this.email = email;
             this.age = age;
             this.address = address;
+            this.QuizGrades = quizGrades;
+            this.ExamGrades = examGrades;
+            this.HomeworkGrades = homeworkGrades;
         }
 
     }

@@ -2,19 +2,13 @@ namespace classRegister.Entities
 {
     public class Grades
     {
-        private string idStudent;
 
-        private List<float> quizGrades = new List<float>(4);
+        private List<float> quizGrades = new List<float>();
 
-        private List<float> examGrades = new List<float>(3);
+        private List<float> examGrades = new List<float>();
 
-        private List<float> homeworkGrades = new List<float>(2);
+        private List<float> homeworkGrades = new List<float>();
 
-        public string IdStudent
-        {
-            get => idStudent;
-            set => idStudent = value;
-        }
 
         public List<float> QuizGrades
         {
@@ -38,9 +32,8 @@ namespace classRegister.Entities
         {
         }
 
-        public Grades(string idStudent, List<float> quizGrades, List<float> examGrades, List<float> homeworkGrades)
+        public Grades( List<float> quizGrades, List<float> examGrades, List<float> homeworkGrades)
         {
-            this.idStudent = idStudent;
             this.quizGrades = quizGrades;
             this.examGrades = examGrades;
             this.homeworkGrades = homeworkGrades;
